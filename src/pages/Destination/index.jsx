@@ -1,87 +1,62 @@
 import React, { useState } from 'react'
 import Header from '../../components/Header'
 import TextTop from '../../components/TextTop'
-import {
-    DestinationA,
-    DestinationB,
-    DestinationC,
-    DestinationD,
-} from './components/TabsContent'
+import data from '../../data/data.json'
 
 const Destination = () => {
-    const [activeOnglets, setActiveOnglets] = useState(1)
+    const [destination] = useState(data.destinations)
+    const [indexTable, setIndex] = useState(0)
+    const { name, description, distance, travel, images } =
+        destination[indexTable]
 
-    const Onglets = () => {
-        switch (activeOnglets) {
-            case 1:
-                return <DestinationA />
-            case 2:
-                return <DestinationB />
-            case 3:
-                return <DestinationC />
-            case 4:
-                return <DestinationD />
-            default:
-        }
-    }
-    const ChangeOnglets = (number) => {
-        setActiveOnglets(number)
-    }
+    console.log(destination[indexTable])
 
     return (
         <>
             <Header />
-            <div className="destination section">
+            <main className="destination section">
                 <div className="destination__container container">
                     <TextTop title="Pick your destination" number="01" />
-                    <div className="destination__box">
-                        <ul className="destination__list-btns">
-                            <li className="destina__item">
-                                <button
-                                    onClick={() => ChangeOnglets(1)}
-                                    className={`btn ${
-                                        activeOnglets === 1 ? 'active' : ''
-                                    }`}
-                                >
-                                    Moon
-                                </button>
-                            </li>
-                            <li className="destina__item">
-                                <button
-                                    onClick={() => ChangeOnglets(2)}
-                                    className={`btn ${
-                                        activeOnglets === 2 ? 'active' : ''
-                                    }`}
-                                >
-                                    Mars
-                                </button>
-                            </li>
-                            <li className="destina__item">
-                                <button
-                                    onClick={() => ChangeOnglets(3)}
-                                    className={`btn ${
-                                        activeOnglets === 3 ? 'active' : ''
-                                    }`}
-                                >
-                                    Europa
-                                </button>
-                            </li>
-                            <li className="destina__item">
-                                <button
-                                    onClick={() => ChangeOnglets(4)}
-                                    className={`btn ${
-                                        activeOnglets === 4 ? 'active' : ''
-                                    }`}
-                                >
-                                    Titan
-                                </button>
-                            </li>
-                        </ul>
+                    <div className="destination__content">
+                        <div className="img-content-left">
+                            <img src={images.png} alt={name} />
+                        </div>
+                        <div className="txt-content-right">
+                            <ul className="btns-list">
+                                {destination.map(({ name }, index) => {
+                                    return (
+                                        <li>
+                                            <button
+                                                key={index}
+                                                onClick={() => setIndex(index)}
+                                                className="btn"
+                                            >
+                                                {name}
+                                            </button>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                            <h1 className="section__title-big">{name}</h1>
+                            <p className="section__description">
+                                {description}
+                            </p>
+                            <div className="line"></div>
 
-                        <div className="destination__content">{Onglets()}</div>
+                            <div className="info">
+                                <div className="info-box-left">
+                                    <span>Avg. Distance</span>
+                                    <p>{distance}</p>
+                                </div>
+                                <div className="info-box-right">
+                                    <span>Est. Travel Time</span>
+                                    <p>{travel}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </main>
         </>
     )
 }

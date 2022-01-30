@@ -109,6 +109,7 @@ class CrewsSwiper extends React.Component {
                             </div>
                         </div>
                     </div>
+                    
                     <div class="swiper-pagination"></div>
                 </div>
             </>

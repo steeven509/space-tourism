@@ -1,48 +1,60 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { useState } from 'react/cjs/react.development'
 
 const Header = () => {
+    const [isActive, setIsActive] = useState(false)
+
     return (
-       <div className="header">
-          <div className="header__logo">
-              <img src="./logo.svg" alt="logo space" />
-          </div>
-          
+        <header className="header">
+            <div className="header__logo">
+                <img src="./logo.svg" alt="logo space" />
+            </div>
 
-          <nav className='header__nav'>
-            <div className="header__line"></div>
-              <ul className="header__list">
-                 <li className="header__item"> 
-                     <NavLink exact 
-                        activeClassName="active" to="/"
-                        rel='noreferrer noopener'
-                        className="hover" >
-                         <span>00</span> Home
-                     </NavLink></li>
-                 <li className="header__item">
-                     <NavLink activeClassName="active" 
-                         to="/destination"
-                         className="hover">
-                         <span>01</span> Destination
-                      </NavLink></li>
-                 <li className="header__item">
-                     <NavLink activeClassName="active" 
-                         to="/crew"
-                         className="hover">
-                         <span>02</span> Crew
-                     </NavLink></li>
-                 <li className="header__item">
-                     <NavLink activeClassName="active" 
-                         to="/technology"
-                         rel='noreferrer'
-                         className="hover">
-                         <span>03</span> Technology
-                     </NavLink></li>
-              </ul>
-          </nav>  
+            <nav className="header__nav">
+                <div className="header__line"></div>
+                <ul className="header__list">
+                    <li className="header__item">
+                        <Link
+                            onClick={() => setIsActive(true)}
+                            to="/"
+                            rel="noreferrer noopener"
+                            className={`hover ${isActive ? 'active' : ''}`}
+                        >
+                            <span>00</span> Home
+                        </Link>
+                    </li>
+                    <li className="header__item">
+                        <Link
+                            to="/destination"
+                            className={`hover ${isActive ? 'active' : ''}`}
+                        >
+                            <span>01</span> Destination
+                        </Link>
+                    </li>
+                    <li className="header__item">
+                        <Link
+                            onClick={() => setIsActive(true)}
+                            to="/crew"
+                            className={`hover ${isActive ? 'active' : ''}`}
+                        >
+                            <span>02</span> Crew
+                        </Link>
+                    </li>
+                    <li className="header__item">
+                        <Link
+                            onClick={() => setIsActive(true)}
+                            to="/technology"
+                            rel="noreferrer"
+                            className={`hover ${isActive ? 'active' : ''}`}
+                        >
+                            <span>03</span> Technology
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    )
+}
 
-       </div>
-    );
-};
-
-export default Header;
+export default Header
