@@ -7,14 +7,14 @@ const Crew = () => {
     return (
         <>
             <Header />
-            <div className="crew section">
-                <div className="crew__container container">
+            <main className="crew section">
+                <div className="crew__container">
                     <TextTop title="Meet Your Crew" number="02" />
                     <div className="crew__content">
                         <CrewsSwiper />
                     </div>
                 </div>
-            </div>
+            </main>
         </>
     )
 }

@@ -6,10 +6,8 @@ import data from '../../data/data.json'
 const Destination = () => {
     const [destination] = useState(data.destinations)
     const [indexTable, setIndex] = useState(0)
-    const { name, description, distance, travel, images } =
-        destination[indexTable]
 
-    console.log(destination[indexTable])
+    const { name, description, distance, travel, images } = destination[indexTable]
 
     return (
         <>
@@ -29,7 +27,11 @@ const Destination = () => {
                                             <button
                                                 key={index}
                                                 onClick={() => setIndex(index)}
-                                                className="btn"
+                                                className={`btn ${
+                                                    index === indexTable
+                                                        ? 'active'
+                                                        : ''
+                                                }`}
                                             >
                                                 {name}
                                             </button>

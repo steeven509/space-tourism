@@ -1,10 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { useState } from 'react/cjs/react.development'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
-    const [isActive, setIsActive] = useState(false)
-
     return (
         <header className="header">
             <div className="header__logo">
@@ -15,41 +12,36 @@ const Header = () => {
                 <div className="header__line"></div>
                 <ul className="header__list">
                     <li className="header__item">
-                        <Link
-                            onClick={() => setIsActive(true)}
-                            to="/"
+                        <NavLink 
+                            to="/" 
                             rel="noreferrer noopener"
-                            className={`hover ${isActive ? 'active' : ''}`}
-                        >
+                            className={`hover ${(ul) =>
+                                ul.isActive ? 'active ' : ''}`}
+                            >
                             <span>00</span> Home
-                        </Link>
+                        </NavLink>
                     </li>
                     <li className="header__item">
-                        <Link
-                            to="/destination"
-                            className={`hover ${isActive ? 'active' : ''}`}
-                        >
+                        <NavLink to="/destination">
                             <span>01</span> Destination
-                        </Link>
+                        </NavLink>
                     </li>
                     <li className="header__item">
-                        <Link
-                            onClick={() => setIsActive(true)}
+                        <NavLink
                             to="/crew"
-                            className={`hover ${isActive ? 'active' : ''}`}
+                            className='hover'
                         >
                             <span>02</span> Crew
-                        </Link>
+                        </NavLink>
                     </li>
                     <li className="header__item">
-                        <Link
-                            onClick={() => setIsActive(true)}
+                        <NavLink
                             to="/technology"
                             rel="noreferrer"
-                            className={`hover ${isActive ? 'active' : ''}`}
+                            className="hover"
                         >
                             <span>03</span> Technology
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>

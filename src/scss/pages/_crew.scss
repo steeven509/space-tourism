@@ -1,14 +1,15 @@
 .crew {
-    height: 100vh;
-    background: url(../../assets/crew/background-crew-desktop.jpg);
+    background: url(../../../public/assets/crew/background-crew-desktop.jpg);
     background-size: cover;
     background-position: fixed;
     @include flex-center();
 
     &__container {
+        width: 80%;
+        margin: 170px auto 0 auto;
+
         .crew__content {
-            // margin-top: 30px;
-            border: 1px solid rgb(168, 54, 54);
+            // border: 1px solid rgb(168, 54, 54);
             height: 70%;
         }
     }

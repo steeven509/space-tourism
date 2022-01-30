@@ -20,6 +20,7 @@ body {
     height: 100vh;
     background-image: url(../../../public/assets/home/background-home-desktop.jpg);
     background-size: cover;
+    // background-repeat: no-repeat;
     background-attachment: fixed;
     color: $primary-color;
     font-family: $body-font;

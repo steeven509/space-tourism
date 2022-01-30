@@ -1,7 +1,10 @@
-.header{
+.header {
     // border: 1px solid #fff;
     position: fixed;
     width: 1385px;
+    // RESPONSIVE
+    // width: 80%;
+    // right: 0;
     height: 96px;
     margin: 20px auto;
     margin-left: 55px;
@@ -9,15 +12,13 @@
     justify-content: space-between;
     align-items: center;
 
-
-    &__logo{
+    &__logo {
         width: 48px;
         height: 48px;
         object-fit: cover;
     }
 
-    
-    &__nav{
+    &__nav {
         position: relative;
         width: 830px;
         height: 100%;
@@ -26,8 +27,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
-        .header__line{
+
+        .header__line {
             position: absolute;
             left: -256px;
             top: 50%;
@@ -39,10 +40,10 @@
             opacity: 0.25;
         }
 
-        ul{
+        ul {
             display: flex;
 
-            a{
+            a {
                 position: relative;
                 font-family: $font-2;
                 color: $primary-color;
@@ -52,12 +53,12 @@
                 letter-spacing: 1px;
                 margin-left: 30px;
 
-                span{
+                span {
                     font-weight: 700;
                     margin: 5px;
                 }
-                
-                &::after{
+
+                &::after {
                     content: '';
                     position: absolute;
                     width: 0;
@@ -68,17 +69,15 @@
                     transform: translateX(-50%);
                     transition: 0.3s;
                 }
-                
-                &:hover::after{
-                    width: 80%;
+
+                &:hover::after {
+                    width: 100%;
                     opacity: 0.5;
                 }
-
             }
-     
-            .active{
 
-                &::after{
+            .active {
+                &::after {
                     content: '';
                     position: absolute;
                     width: 70px;
@@ -88,9 +87,7 @@
                     left: 50%;
                     transform: translateX(-50%);
                 }
-            }  
-
-            
+            }
         }
     }
 }

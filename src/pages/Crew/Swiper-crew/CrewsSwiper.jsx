@@ -1,11 +1,12 @@
 import React from 'react'
 import Swiper from 'swiper'
 import 'swiper/css/bundle'
-
-import douglas from '../../../assets/crew/image-douglas-hurley.png'
-
+// import data from '../../../data/data"./assets/crew/"
 // import Swiper core and required modules
 import SwiperCore, { Pagination } from 'swiper'
+
+
+
 // install Swiper modules
 SwiperCore.use([Pagination])
 
@@ -42,7 +43,7 @@ class CrewsSwiper extends React.Component {
                                 </p>
                             </div>
                             <div className="img-content-right">
-                                <img src={douglas} alt="douglas-hurley" />
+                                <img src="./assets/crew/image-victor-glover.png" alt="douglas-hurley" />
                             </div>
                         </div>
                         {/* Slide B  */}
@@ -63,7 +64,7 @@ class CrewsSwiper extends React.Component {
                                 </p>
                             </div>
                             <div className="img-content-right">
-                                <img src={douglas} alt="douglas-hurley" />
+                                <img src="./assets/crew/image-victor-glover.png" alt="douglas-hurley" />
                             </div>
                         </div>
                         {/* Slide C  */}
@@ -84,7 +85,7 @@ class CrewsSwiper extends React.Component {
                                 </p>
                             </div>
                             <div className="img-content-right">
-                                <img src={douglas} alt="douglas-hurley" />
+                                <img src="./assets/crew/image-victor-glover.png" alt="douglas-hurley" />
                             </div>
                         </div>
                         {/* Slide D  */}
@@ -105,7 +106,7 @@ class CrewsSwiper extends React.Component {
                                 </p>
                             </div>
                             <div className="img-content-right">
-                                <img src={douglas} alt="douglas-hurley" />
+                                <img src="./assets/crew/image-victor-glover.png" alt="douglas-hurley" />
                             </div>
                         </div>
                     </div>
