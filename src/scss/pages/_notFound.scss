@@ -1,0 +1,8 @@
+.notFound{
+    height: 100vh;
+    @include flex-center();
+
+    h1{
+        color: #fff;
+    }
+}

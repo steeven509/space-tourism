@@ -1,0 +1,31 @@
+//Colors
+$primary-color: #ffffff;
+$second-color: #D0D6F9;
+$third-color: #0B0D17;
+
+
+//TYPOGRAPHY & SIZE
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;500;600;700;800;900&display=swap');
+@font-face{
+    font-family:"bellefair-regular";
+    src:url("https://dafonttop.com/wp-data/b/360/9360/file/bellefair.regular.ttf") format("woff"),
+    url("https://dafonttop.com/wp-data/b/360/9360/file/bellefair.regular.ttf") format("opentype"),
+    url("https://dafonttop.com/wp-data/b/360/9360/file/bellefair.regular.ttf") format("truetype");
+}
+
+$body-font: 'Bellefair', serif;
+$font-2: 'Barlow Condensed', sans-serif;
+
+$big-font-size: 150px;
+$h2-font-size: 100px;
+$h3-font-size: 56px;
+$h4-font-size: 32px;
+$h5-font-size: 28px;
+$body-txt-size: 18px;
+$normal-font-size: 16px;
+$small-font-size: 14px;
+
+
+//FONT WEIGHT
+$font-bold: 500;
