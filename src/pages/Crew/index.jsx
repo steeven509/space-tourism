@@ -9,8 +9,8 @@ const Crew = () => {
             <Header />
             <main className="crew section">
                 <div className="crew__container">
-                    <TextTop title="Meet Your Crew" number="02" />
                     <div className="crew__content">
+                        <TextTop title="Meet Your Crew" number="02" />
                         <CrewsSwiper />
                     </div>
                 </div>

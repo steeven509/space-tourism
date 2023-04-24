@@ -9,6 +9,7 @@
         height: 60%;
         margin: auto;
     }
+
     &__title-big,
     &__title-normal,
     &__subtitle {
@@ -20,18 +21,22 @@
         font-size: $h2-font-size;
         line-height: 1.7;
     }
+
     &__title-normal {
         font-size: $h4-font-size;
         line-height: 37px;
         opacity: 0.5;
     }
+
     // &__title-small{
 
     // }
     &__subtitle {
         font-size: $h3-font-size;
         line-height: 64px;
+        margin-bottom: 1rem;
     }
+
     &__description {
         font-size: $body-txt-size;
         font-family: $font-2;
@@ -39,6 +44,7 @@
         line-height: 32px;
         color: $second-color;
         margin-bottom: 40px;
+        max-width: 380px;
     }
 }
 
