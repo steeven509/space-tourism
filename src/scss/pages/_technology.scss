@@ -1,0 +1,40 @@
+.technology {
+
+    &__container {
+        width: 100%;
+        height: 60%;
+        padding-left: 8rem;
+        border: 2px solid #fff;
+
+        .technology__content {
+            border: 2px solid red;
+
+            .content-left,
+            .content-right {
+                width: 50%;
+                height: 60%;
+            }
+
+            .content-left {
+
+                .btns-list {
+                    display: flex;
+                    flex-direction: column;
+
+                    button {
+                        display: block;
+                        cursor: pointer;
+                        background: transparent;
+                        color: #fff;
+                        font-size: 2.5vh;
+                        border: 1px solid gray;
+                        border-radius: 50%;
+                        width: 90px;
+                        height: 90px;
+                    }
+
+                }
+            }
+        }
+    }
+}

@@ -38,11 +38,12 @@ function CrewsSwiper() {
                                 </p>
                             </div>
                             <div className="img-content-right">
-                                {/* <img
-                                    src="./assets/crew/image-victor-glover.png"
-                                    alt="douglas-hurley"
-                                /> */}
-                                <img src={item.images.png} alt="" />
+                                <div className="img-content-mobile">
+                                    <img
+                                        src={item.images.png}
+                                        alt={item.name}
+                                    />
+                                </div>
                             </div>
                         </SwiperSlide>
                     ))}

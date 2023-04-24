@@ -12,12 +12,12 @@ const Header = () => {
                 <div className="header__line"></div>
                 <ul className="header__list">
                     <li className="header__item">
-                        <NavLink 
-                            to="/" 
+                        <NavLink
+                            to="/"
                             rel="noreferrer noopener"
                             className={`hover ${(ul) =>
                                 ul.isActive ? 'active ' : ''}`}
-                            >
+                        >
                             <span>00</span> Home
                         </NavLink>
                     </li>
@@ -27,10 +27,7 @@ const Header = () => {
                         </NavLink>
                     </li>
                     <li className="header__item">
-                        <NavLink
-                            to="/crew"
-                            className='hover'
-                        >
+                        <NavLink to="/crew" className="hover">
                             <span>02</span> Crew
                         </NavLink>
                     </li>
